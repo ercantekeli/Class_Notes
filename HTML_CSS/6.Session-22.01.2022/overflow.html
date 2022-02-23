@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            border: 3px solid red;
+            width: 300px;
+            height: 70px;
+            margin-bottom: 90px;
+        }
+        #item1{
+            overflow: visible;
+        }
+        #item2{
+            overflow: hidden;
+        }
+        #item3{
+            overflow: scroll;
+        }
+        #item4{
+            overflow: auto;
+        }
+        #item5{
+            /* overflow-x: hidden;
+            overflow-y: scroll; */
+            overflow: auto;
+        }
+        #parag5{
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="item1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, eaque qui ducimus voluptatibus iusto esse earum neque fugit iste necessitatibus suscipit deleniti quibusdam pariatur ratione provident distinctio quisquam? Rem, sint quaerat? Iure fuga maxime veritatis similique rem quas animi tempora.</div>
+    <div class="box" id="item2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, eaque qui ducimus voluptatibus iusto esse earum neque fugit iste necessitatibus suscipit deleniti quibusdam pariatur ratione provident distinctio quisquam? Rem, sint quaerat? Iure fuga maxime veritatis similique rem quas animi tempora.</div>
+    <div class="box" id="item3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, eaque qui ducimus voluptatibus iusto esse earum neque fugit iste necessitatibus suscipit deleniti quibusdam pariatur ratione provident distinctio quisquam? Rem, sint quaerat? Iure fuga maxime veritatis similique rem quas animi tempora.</div>
+    <div class="box" id="item4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, eaque qui ducimus voluptatibus iusto esse earum neque fugit iste necessitatibus suscipit deleniti quibusdam pariatur ratione provident distinctio quisquam? Rem, sint quaerat? Iure fuga maxime veritatis similique rem quas animi tempora.</div>
+    <div class="box" id="item5">
+        <p id="parag5"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, eaque qui ducimus voluptatibus iusto esse earum neque fugit iste necessitatibus suscipit deleniti quibusdam pariatur ratione provident distinctio quisquam? Rem, sint quaerat? Iure fuga maxime veritatis similique rem quas animi tempora.</p></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wen Page with Float</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        header{
+            background-color: aqua;
+            border: 1px solid black;
+        }
+        main{
+            background-color: blueviolet;
+            padding: 20px;
+            border: 1px solid black;
+            /* height: 500px; */
+            overflow: auto;
+        }
+        aside{
+            background-color: chartreuse;
+            border: 1px solid black;
+            width: 25%;
+            height: 300px;
+            float: left;
+        }
+        article{
+            background-color: coral;
+            border: 1px solid black;
+            width: 70%;
+            height: 300px;
+            float: right;
+        }
+        footer{
+            background-color: darkgray;
+            border: 1px solid black;
+        }
+        .clear{
+            /* clear: both; */
+        }
+    </style>
+</head>
+<body>
+    <header>HEADER</header>
+    <main>
+        <aside>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et eos officiis odio ipsam esse sint tenetur adipisci, perferendis nemo quia. Aspernatur delectus eius tenetur minima dignissimos eveniet, iste cum dolorem? Eos placeat dolores molestiae et officiis vero iusto voluptas exercitationem.
+        </aside>
+        <article>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum quidem in labore impedit, praesentium fuga deserunt vitae natus voluptatem vero, fugiat, corporis fugit quis facere odit. Enim aliquam nisi eum, labore pariatur omnis asperiores nobis, voluptas a consequatur aspernatur tempora facilis, quibusdam aliquid repudiandae quisquam sit voluptatum rem eos cupiditate. Voluptatum reprehenderit ipsam facere commodi iste aliquid vitae ullam repudiandae enim et saepe praesentium magni, voluptate harum eaque! Laudantium dolores aspernatur repellendus ab placeat mollitia soluta? Temporibus dolorum delectus autem.
+        </article>
+        <div class="clear"></div>
+    </main>
+    <footer>Webpage with Float CLARUSWAY</footer>
+</body>
+</html>
