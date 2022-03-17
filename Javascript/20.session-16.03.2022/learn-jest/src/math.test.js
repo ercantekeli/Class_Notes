@@ -45,3 +45,37 @@ describe('::calculateTotal', () => {
     expect(calculateTotal(200)).toBe(236);
   });
 });
+
+describe('::fibonacci', () => {
+  it('should exist', () => {
+    expect(fibonacci).toBeDefined();
+  });
+
+  it('should return a number', () => {
+    expect(fibonacci(1)).toBe(1);
+  });
+
+  it('should return the 10th number as 55', () => {
+    expect(fibonacci(10)).toBe(55);
+  });
+
+  it('should return 1 without number', () => {
+    expect(fibonacci()).toBe(1);
+  });
+
+  it('should throw error if the number is less than 1', () => {
+    expect(() => fibonacci(0)).toThrow(new Error('Must enter a number greater than 0'));
+  });
+});
+
+/*
+node --version
+npm --version
+  eğer varolan bir proje ise sadece
+    npm install
+npm init -y
+npm i jest -D
+npm install
+npm test
+
+*/
