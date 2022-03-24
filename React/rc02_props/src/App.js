@@ -1,3 +1,4 @@
+import Clock from "./components/Clock";
 import Person from "./components/Person";
 
 function App() {

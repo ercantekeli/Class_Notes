@@ -1,4 +1,5 @@
 import React from "react";
+import Clock from "./Clock";
 import Message from "./Message";
 
 function Person({ name, img, tel }) {
@@ -9,6 +10,7 @@ function Person({ name, img, tel }) {
       <h2>{name}</h2>
       <img src={img} alt="" />
       <h3>{tel}</h3>
+      <Clock/>
     </div>
   );
 }
