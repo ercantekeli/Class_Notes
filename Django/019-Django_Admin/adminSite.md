@@ -134,7 +134,7 @@ some modelAdmin options:
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("name", "create_date", "is_in_stock", "update_date")
     list_editable = ( "is_in_stock", )
-    # list_display_links = ("create_date", ) #can't add items in list_editable to here
+    #list_display_links = ("create_date", ) list_display_links = ("create_date", ) #can't add items in list_editable to here
     list_filter = ("is_in_stock", "create_date")
     ordering = ("name",)  
     search_fields = ("name",)
@@ -267,7 +267,7 @@ admin.site.register(Review, ReviewAdmin)
 
 shell
 ```
-from products.models import Product, Review
+from product.models import Product, Review
 from faker import Faker
 faker = Faker()
 for product in Product.objects.iterator():
