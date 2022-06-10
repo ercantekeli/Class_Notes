@@ -2,7 +2,8 @@ from django.contrib import admin
 from .models import Product, Review, Category
 from django.utils import timezone
 from django.utils.safestring import mark_safe
-
+from import_export.admin import ImportExportModelAdmin
+from product.resources import ReviewResource
 
 class ReviewInline(admin.TabularInline):  # StackedInline farklı bir görünüm aynı iş
     '''Tabular Inline View for '''
@@ -59,14 +60,13 @@ class ProductAdmin(admin.ModelAdmin):
             return mark_safe(f"<img src={obj.product_img.url} width=50 height=50></img>")
         return mark_safe("******")
 
-    bring_img_to_list.short_description = "product_image"
 
-class ReviewAdmin(admin.ModelAdmin):
+class ReviewAdmin(ImportExportModelAdmin):
     autocomplete_fields = ("product",)
     list_display = ('__str__', 'created_date', 'is_released')
     list_per_page = 50
     # raw_id_fields = ('product',)
-
+    resource_class = ReviewResource
 
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Review, ReviewAdmin)

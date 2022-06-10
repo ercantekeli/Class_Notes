@@ -450,7 +450,7 @@ settings.py:
 ```
 ilk önce buraya bakar yoksa defaulta gider,
 
-templates/admin/products/product/change_form.html
+templates/admin/product/product/change_form.html
 
 ** içi boş olduğu için Ekleme ve Güncelleme Sayfaları boş görünecek
 
