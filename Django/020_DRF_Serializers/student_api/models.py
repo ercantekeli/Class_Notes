@@ -3,7 +3,7 @@ from django.db import models
 
 
 
-class PAth(models.Model):
+class Path(models.Model):
     path_name = models.CharField(max_length=10)
 
     def __str__(self):
