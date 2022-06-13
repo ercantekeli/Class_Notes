@@ -19,5 +19,5 @@ class Student(models.Model):
     # null=True for db
     
     def __str__(self):
-        return f"{self.last_name} {self.first_name}"
+        return self.last_name
 
