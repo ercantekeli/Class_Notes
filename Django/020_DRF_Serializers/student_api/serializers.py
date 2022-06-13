@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from .models import Student
-
+from django.utils.timezone import now
 
 # class StudentSerializer(serializers.Serializer):
 #     first_name = serializers.CharField(max_length=50)
@@ -21,16 +21,28 @@ from .models import Student
 #         return instance
 
 class StudentSerializer(serializers.ModelSerializer):
+    days_since_joined = serializers.SerializerMethodField()
     class Meta:
         model = Student
-        fields = ['id', 'first_name', 'last_name', 'number']
-        # fields = '__all__'
+        # fields = ['id', 'first_name', 'last_name', 'number', 'days_since_joined']
+        fields = '__all__'
         # exclude = ['id']
 
-        def validate_number(self, value):
-            """
-            Check that the blog post is about Django.
-            """
-            if value >  1000:
-                raise serializers.ValidationError("Numbers must below 1000!")
-            return value
+    def validate_number(self, value):
+        """
+        Check the number is below 1000        """
+        if value >  1000:
+            raise serializers.ValidationError("Numbers must below 1000!")
+        return value
+
+    
+    def validate_first_name(self, value):
+        """
+        Check that the first name is tuncay
+        """
+        if value.lower() == "tuncay":
+            raise serializers.ValidationError("tuncay can not be our student")
+        return value
+
+    def get_days_since_joined(self, obj):
+        return (now() - obj.register_date).days
